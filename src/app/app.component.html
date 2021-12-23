@@ -1,2 +1,9 @@
-
-<app-hello></app-hello>
+<label style="font-size: 30px;" for="fonts">Select exercice : </label>
+<select name="fonts" id="fonts" [(ngModel)]="ex">
+    <option value="ex1">First exercice</option>
+    <option value="ex2">Second exercice</option>
+    <option value="ex3">Third exercice</option>
+</select>
+<br>
+<app-hello *ngIf="ex === 'ex1'"></app-hello>
+<app-calculator *ngIf="ex === 'ex2'"></app-calculator>

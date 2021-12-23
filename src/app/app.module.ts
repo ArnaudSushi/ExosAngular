@@ -5,11 +5,13 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
