@@ -1,0 +1,26 @@
+<div>
+    <label for="name">Name : </label>
+    <input id="name" [(ngModel)]="name" placeholder="name">
+</div>
+<div>
+    <p [style.font-family]="font" [style.font-size]="fontSize+'px'" [style.text-align]="align">Bonjour {{name | uppercase}} !</p>
+    <label for="fonts">Choose a font : </label>
+    <select name="fonts" id="fonts" [(ngModel)]="font">
+        <option *ngFor="let font of fontFamilies" value="{{font.value}}">{{font.title}}</option>
+    </select>
+    <br>
+    <label for="size">Enter a size : </label>
+    <input type="number" [(ngModel)]="fontSize">
+    <br>
+    <label style="text-align: center;" for="align">Choose alignment</label>
+    <section>
+        <input type="radio" id="left" name="align" value="left" checked (click)="changeAlign('left');">
+        <label for="left">Left</label>
+
+        <input type="radio" id="center" name="align" value="center" (click)="changeAlign('center');">
+        <label for="center">Center</label>
+
+        <input type="radio" id="right" name="align" value="right" (click)="changeAlign('right');">
+        <label for="right">Right</label>
+    </section>
+</div>
