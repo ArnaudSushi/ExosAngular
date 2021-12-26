@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'ExosAngular';
-  ex: string = "ex2";
+  ex: string = "ex3";
 }
